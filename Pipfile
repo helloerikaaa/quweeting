@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+lambeq = "*"
+pandas = "*"
+discopy = "*"
+tensornetwork = "*"
+torch = {version = "==1.6.0", file = "https://download.pytorch.org/whl/cpu/torch-1.6.0-cp38-none-macosx_10_9_x86_64.whl"}
+
+[dev-packages]
+autopep8 = "*"
+
+[requires]
+python_version = "3.8"
