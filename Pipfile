@@ -10,6 +10,8 @@ discopy = "*"
 tensornetwork = "*"
 torch = {version = "==1.6.0", file = "https://download.pytorch.org/whl/cpu/torch-1.6.0-cp38-none-macosx_10_9_x86_64.whl"}
 nltk = "*"
+cython = "*"
+numpy = "*"
 
 [dev-packages]
 autopep8 = "*"
