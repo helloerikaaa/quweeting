@@ -12,6 +12,7 @@ torch = {version = "==1.6.0", file = "https://download.pytorch.org/whl/cpu/torch
 nltk = "*"
 cython = "*"
 numpy = "*"
+depccg = "*"
 
 [dev-packages]
 autopep8 = "*"

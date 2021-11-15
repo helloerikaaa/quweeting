@@ -34,3 +34,6 @@ class Train:
                 accuracies.append(acc.item())
 
             return cost
+
+        costs, accuracies = [], []
+        return cost_fn, costs, accuracies
