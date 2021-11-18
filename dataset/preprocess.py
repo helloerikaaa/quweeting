@@ -3,7 +3,7 @@ import string
 import unicodedata
 
 import nltk
-#nltk.download('stopwords')
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 
 STOPWORDS = stopwords.words('english')

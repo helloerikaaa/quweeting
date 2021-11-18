@@ -3,15 +3,20 @@ import tensornetwork as tn
 from sympy import default_sort_key
 
 
-class Parameters:
+class Parameter:
 
-    def make_pred_fn(self, circuits):
-        parameters = sorted(
+    def __init__(self, circuits):
+        self.circuits = circuits
+        self.parameters = sorted(
             {s for circ in circuits for s in circ.free_symbols},
             key=default_sort_key)
 
+    def make_pred_fn(self):
         def predict(params):
             return torch.stack(
-                [c.lambdify(*parameters)(*params).eval(contractor=tn.contractors.auto).array
-                 for c in circuits])
+                [c.lambdify(*self.parameters)(*params).eval(contractor=tn.contractors.auto).array
+                 for c in self.circuits])
         return predict
+
+    def get_parameters(self):
+        return self.parameters

@@ -5,6 +5,8 @@ import torch
 class Dataset:
 
     def read_data(self, dataset):
+        
+        print('Reading data...')
         labels = dataset['target'].unique().tolist()
         sentences = dataset['text'].tolist()
 
